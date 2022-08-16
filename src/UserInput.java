@@ -12,7 +12,22 @@ public class UserInput {
             } catch (Exception e) {
                 System.out.println(errorText);
             }
-        }while(number < min);
+        }while(number <= min);
+
+        return number;
+    }
+    public static int getInt(int min, int max, String errorText){
+        int number = 0;
+
+        do {
+            try {
+                Scanner sc = new Scanner(System.in);
+                String tmp = sc.nextLine();
+                number = Integer.parseInt(tmp);
+            } catch (Exception e) {
+                System.out.println(errorText);
+            }
+        }while(number < min && number < max);
 
         return number;
     }
