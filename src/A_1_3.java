@@ -6,7 +6,7 @@ public class A_1_3 {
         System.out.println("Lowercase: " + name.toLowerCase());
         name = "Hello Codersbay";
         System.out.println(name);
-        
+
 
         System.out.println();
         for(int i = 0; i < 15; i++){
