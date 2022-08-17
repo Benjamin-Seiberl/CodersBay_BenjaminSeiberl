@@ -24,8 +24,5 @@ public class A_4_1_Leetspeak {
             } else {
                 System.out.print(inputChar);
             }
-
-
-
     }
 }
