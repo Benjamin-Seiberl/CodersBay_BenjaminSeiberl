@@ -31,4 +31,20 @@ public class UserInput {
 
         return number;
     }
+
+    public static String getString(String errorText){
+        String input = "";
+        boolean error = false;
+       do {
+            try {
+                Scanner sc = new Scanner(System.in);
+                input = sc.nextLine();
+            } catch (Exception e) {
+                System.out.println(errorText);
+                error = true;
+            }
+        }while(error);
+
+        return input;
+    }
 }
