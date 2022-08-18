@@ -15,15 +15,25 @@ public class A_6_1_GameOfLife {
             }
         }
 
-        for (int i = 0; i < 20; i++) {
-            liveOrDie(gameBoard);
+        for (int i = 0; i < 200; i++) {
+
+            gameBoard = liveOrDie(gameBoard);
+            System.out.println("Generation: " + i);
+            for (char[] chars : gameBoard) {
+                for (int l = 0; l < chars.length; l++) {
+                    System.out.printf(" %s ", chars[l]);
+                }
+                System.out.println();
+            }
+
+            System.out.println("\n\n\n");
         }
 
 
     }
 
 
-    public static void liveOrDie(char[][] gameBoard) {
+    public static char[][] liveOrDie(char[][] gameBoard) {
         int neighbors;
         for (int i = 0; i < gameBoard.length; i++) {
             for (int j = 0; j < gameBoard[i].length; j++) {
@@ -124,7 +134,7 @@ public class A_6_1_GameOfLife {
                 } else {
                     gameBoard[i][j] = '.';
                 }
-                System.out.println("y: " + i + " x: " + j);
+                /*System.out.println("y: " + i + " x: " + j);
                 for (int k = 0; k < gameBoard.length; k++) {
                     for (int l = 0; l < gameBoard[k].length; l++) {
                         if (k == i && l == j) {
@@ -137,9 +147,12 @@ public class A_6_1_GameOfLife {
                 }
 
                 System.out.println("\n\n\n");
+                */
+
             }
-            System.out.println();
+            //System.out.println();
         }
+        return gameBoard;
     }
 }
 
