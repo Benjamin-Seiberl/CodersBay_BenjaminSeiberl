@@ -9,7 +9,6 @@ public class A_7_3_ListeSortieren {
                 int temp = list.get(j - 1);
                 list.set(j - 1, list.get(j));
                 list.set(j, temp);
-
                 for (int number : list) {
                     System.out.printf("%4d", number);
                 }
