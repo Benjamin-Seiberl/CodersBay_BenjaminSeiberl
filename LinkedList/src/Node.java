@@ -15,11 +15,5 @@ public class Node<T> {
         return next;
     }
 
-    public void setValue(T value) {
-        this.value = value;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
+    
 }
