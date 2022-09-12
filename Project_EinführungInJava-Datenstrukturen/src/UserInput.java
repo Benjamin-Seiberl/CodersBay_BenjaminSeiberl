@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class UserInput {
-    public static int getInt(int min, String errorText){
+    public static int getInt(int min, String errorText) {
         int number = 0;
 
         do {
@@ -12,11 +12,12 @@ public class UserInput {
             } catch (Exception e) {
                 System.out.println(errorText);
             }
-        }while(number <= min);
+        } while (number <= min);
 
         return number;
     }
-    public static int getInt(int min, int max, String errorText){
+
+    public static int getInt(int min, int max, String errorText) {
         int number = 0;
 
         do {
@@ -27,15 +28,15 @@ public class UserInput {
             } catch (Exception e) {
                 System.out.println(errorText);
             }
-        }while(number < min && number < max);
+        } while (number < min && number < max);
 
         return number;
     }
 
-    public static String getString(String errorText){
+    public static String getString(String errorText) {
         String input = "";
         boolean error = false;
-       do {
+        do {
             try {
                 Scanner sc = new Scanner(System.in);
                 input = sc.nextLine();
@@ -43,7 +44,7 @@ public class UserInput {
                 System.out.println(errorText);
                 error = true;
             }
-        }while(error);
+        } while (error);
 
         return input;
     }

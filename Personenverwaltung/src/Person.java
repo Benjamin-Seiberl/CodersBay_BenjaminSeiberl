@@ -16,7 +16,7 @@ public class Person {
         this.gender = gender;
         this.socialSecurityNumber = socialSecurityNumber;
     }
-    
+
     public Person(String firstname, String lastname, LocalDate birthdate, Adress adress, Enum<Gender> gender) {
         this(firstname, lastname, birthdate, adress, gender, "NA");
     }
@@ -26,9 +26,8 @@ public class Person {
     }
 
     public Person(String firstname, String lastname) {
-        this(firstname, lastname, LocalDate.of(0, 0, 0), new Adress(), Gender.NA, "NA");
+        this(firstname, lastname, LocalDate.of(0, 1, 1), new Adress(), Gender.NA, "NA");
     }
-
 
     public String getFirstname() {
         return firstname;
@@ -60,23 +59,27 @@ public class Person {
 
     @Override
     public String toString() {
+        StringBuilder stringbuilder = new StringBuilder();
+        stringbuilder.append("Person{");
+        stringbuilder.append("firstname='");
+        stringbuilder.append(firstname);
+        stringbuilder.append("'");
+        stringbuilder.append(", lastname='");
+        stringbuilder.append(lastname);
+        stringbuilder.append("'");
+        stringbuilder.append(", birthdate=");
+        stringbuilder.append(birthdate);
+        stringbuilder.append(", ");
         if (adress != null) {
-            return "Person{" +
-                    "firstname='" + firstname + '\'' +
-                    ", lastname='" + lastname + '\'' +
-                    ", birthdate=" + birthdate +
-                    ", adress=" + adress.toString() +
-                    ", gender=" + gender +
-                    ", socialSecurityNumber='" + socialSecurityNumber + '\'' +
-                    '}';
+            stringbuilder.append(adress);
         }
-        return "Person{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", birthdate=" + birthdate +
-                ", gender=" + gender +
-                ", socialSecurityNumber='" + socialSecurityNumber + '\'' +
-                '}';
+        stringbuilder.append(", gender=");
+        stringbuilder.append(gender);
+        stringbuilder.append(", socialSecurityNumber='");
+        stringbuilder.append(socialSecurityNumber);
+        stringbuilder.append("}");
+
+        return stringbuilder.toString();
     }
 
 

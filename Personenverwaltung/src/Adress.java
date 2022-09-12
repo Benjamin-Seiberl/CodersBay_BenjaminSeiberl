@@ -33,11 +33,21 @@ public class Adress {
 
     @Override
     public String toString() {
-        return "Adress{" +
-                "streetName='" + streetName + '\'' +
-                ", houseNumber=" + houseNumber +
-                ", cityName='" + cityName + '\'' +
-                ", postCode=" + postCode +
-                '}';
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Adress{");
+        stringBuilder.append("streetname='");
+        stringBuilder.append(streetName);
+        stringBuilder.append("' ");
+        stringBuilder.append("houseNumber='");
+        stringBuilder.append(houseNumber);
+        stringBuilder.append("' ");
+        stringBuilder.append("cityName='");
+        stringBuilder.append(cityName);
+        stringBuilder.append("' ");
+        stringBuilder.append("postCode='");
+        stringBuilder.append(postCode);
+        stringBuilder.append("'}");
+
+        return stringBuilder.toString();
     }
 }

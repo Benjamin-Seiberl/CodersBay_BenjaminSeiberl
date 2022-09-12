@@ -2,9 +2,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class PersonnelManagment {
-    private ArrayList<Person> personnel = new ArrayList<>();
+    private final ArrayList<Person> personnel;
 
     public PersonnelManagment() {
+        personnel = new ArrayList<>();
     }
 
     public PersonnelManagment(ArrayList<Person> personnel) {

@@ -13,6 +13,10 @@ public class DoubleLinkedList<T> {
         end.setPrevious(start);
     }
 
+    public int getSize() {
+        return size;
+    }
+
     public void append(T value) {
         Node n = new Node<T>(value);
         Node temp = end.getPrevious();
@@ -26,6 +30,10 @@ public class DoubleLinkedList<T> {
     }
 
     public void add(int index, T value) {
+        if (index < 0) {
+            return;
+        }
+
         Node n = start;
         Node newNode = new Node<T>(value);
         if (index > size) {

@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 
 public class A_7_1_Mengenlehre {
@@ -14,15 +13,16 @@ public class A_7_1_Mengenlehre {
         ArrayList<Integer> c = new ArrayList<>(Arrays.asList(41, 12, 5, 35, 42, 28, 47, 20, 26, 24, 50, 40, 14, 17, 10));
 */
         print(a, b, c, 0);
+//        System.out.println(getUnionList(a, b));
+//        System.out.println(getIntersectionList(a, b));
+//        System.out.println(b);
         print(a, b, c, 1);
         print(a, b, c, 2);
     }
 
     public static HashSet<Integer> getUnionList(HashSet<Integer> a, HashSet<Integer> b1) {
-        HashSet<Integer> b = new HashSet<>(b1);
         HashSet<Integer> tempList = new HashSet<>(a);
-        b.removeAll(tempList);
-        tempList.addAll(b);
+        tempList.addAll(b1);
         return tempList;
     }
 
