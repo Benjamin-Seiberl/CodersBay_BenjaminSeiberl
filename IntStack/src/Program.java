@@ -1,6 +1,6 @@
 public class Program {
     public static void main(String[] args) {
-        IntStack intStack = new IntStack();
+        Stack intStack = new Stack();
         intStack.push(5);
         intStack.push(4);
         intStack.push(3);

@@ -13,6 +13,16 @@ public class DoubleLinkedList<T> {
         end.setPrevious(start);
     }
 
+    public DoubleLinkedList(T value) {
+        start = new Node<>("start");
+        end = new Node<>("end");
+        start.setNext(end);
+        start.setPrevious(end);
+        end.setNext(start);
+        end.setPrevious(start);
+        this.append(value);
+    }
+
     public int getSize() {
         return size;
     }
@@ -47,12 +57,16 @@ public class DoubleLinkedList<T> {
         }
     }
 
-    public void printList() {
+    public String printList() {
+        StringBuilder stringBuilder = new StringBuilder();
         Node n = start.getNext();
         while (!n.equals(end)) {
-            System.out.println(n.getValue());
+            stringBuilder.append(n.getValue());
+            System.out.print(n.getValue() + " ");
             n = n.getNext();
         }
+        System.out.println();
+        return stringBuilder.toString();
     }
 
     public void printListReverse() {

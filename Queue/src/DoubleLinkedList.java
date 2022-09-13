@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class DoubleLinkedList<T> {
     private Node start;
     private Node end;
@@ -11,6 +13,16 @@ public class DoubleLinkedList<T> {
         start.setPrevious(end);
         end.setNext(start);
         end.setPrevious(start);
+    }
+
+    public DoubleLinkedList(T value) {
+        start = new Node<>("start");
+        end = new Node<>("end");
+        start.setNext(end);
+        start.setPrevious(end);
+        end.setNext(start);
+        end.setPrevious(start);
+        this.append(value);
     }
 
     public int getSize() {
@@ -47,12 +59,15 @@ public class DoubleLinkedList<T> {
         }
     }
 
-    public void printList() {
+    public String printList() {
+        StringBuilder stringBuilder = new StringBuilder();
         Node n = start.getNext();
         while (!n.equals(end)) {
+            stringBuilder.append((n.getValue()));
             System.out.println(n.getValue());
             n = n.getNext();
         }
+        return stringBuilder.toString();
     }
 
     public void printListReverse() {

@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.util.List;
 
 public class Queue<T> {
     DoubleLinkedList<T> dllist;
@@ -7,8 +8,17 @@ public class Queue<T> {
         this.dllist = new DoubleLinkedList<T>();
     }
 
-    public void enqueue(T newElement){
+    public Queue(T value) {
+        this.dllist = new DoubleLinkedList<T>(value);
+    }
+
+    public DoubleLinkedList<T> getDllist() {
+        return dllist;
+    }
+
+    public DoubleLinkedList<T> enqueue(T newElement){
         dllist.append(newElement);
+        return dllist;
     }
 
     public int size(){
@@ -28,7 +38,7 @@ public class Queue<T> {
 
         T[] elements = (T[])new Object[n];
         if (n > dllist.getSize()) {
-
+            return null;
         }
         for (int i = 0; i < n; i++) {
             elements[i] = dequeue();
@@ -36,7 +46,7 @@ public class Queue<T> {
         return elements;
     }
 
-    public void printQueue(){
-       dllist.printList();
+    public String printQueue(){
+        return dllist.printList();
     }
 }
