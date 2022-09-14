@@ -2,59 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aea94d34-8d88-4c00-a596-f79c18a30962" name="Changes" comment="Updated Stack, Queue (UnitTesting)&#10;Added Shapes">
-      <change afterPath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/.idea/libraries/src.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Project_EinführungInJava_Datenstrukturen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/CircleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/RectangleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/SquareTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserInput/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserInput/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserInput/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserInput/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserInput/UserInput.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserInput/src/UserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/Project_EinführungInJava-Datenstrukturen.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/Project_EinführungInJava-Datenstrukturen.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_2_1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_2_2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_2_3_NotenÜbersetzen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_3_1_FizzBuzz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_3_2_DasKleineEinmalEins.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_3_3_CeaesarChiffre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_3_4_BerechnungDesMaximums.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_4_1_Leetspeak.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_5_1_BingoCardGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_5_2_InsertionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_5_3_BubbleSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_5_4_SelectionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_6_1_GameOfLife.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_6_2_DivideAndConquer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_6_3_MergeSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_7_1_Mengenlehre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_7_2_Woerterbuch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_7_3_ListeSortieren.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_8_1_Registrierkasse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_8_2_Distanzberechnung.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/A_8_3_Beispiele.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/CustomNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/Dictionary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/Invoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/Password.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/Register.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/UserInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/out/production/Project_EinführungInJava-Datenstrukturen/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/src/A_2_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_EinführungInJava-Datenstrukturen/src/A_2_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerKampf/out/production/ServerKampf/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerKampf/out/production/ServerKampf/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ADayWithExceptions/src/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ADayWithExceptions/src/HumanException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ADayWithExceptions/src/OversleptException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ADayWithExceptions/src/WorkingOvertimeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ADayWithExceptions/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ADayWithExceptions/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shapes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shapes.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UnitTesting" beforeDir="false" afterPath="$PROJECT_DIR$/../UnitTesting" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
