@@ -9,7 +9,7 @@ class RectangleTest {
     private Rectangle rectangle2;
 
     @BeforeEach
-    void setup(){
+    void setup() {
         rectangle = new Rectangle("#red", true, 2, 3);
         rectangle2 = new Rectangle("#red", true, 6, 8);
 //        rectangle = new Rectangle("#red", true, -1, 3);

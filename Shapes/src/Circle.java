@@ -1,11 +1,11 @@
-public class Circle extends Shape{
+public class Circle extends Shape {
     private double radius;
     static int COUNTER__ = 1;
 
 
     public Circle(String color, boolean isFilled, double radius) throws IllegalArgumentException {
         super(color, isFilled);
-        if(radius <= 0){
+        if (radius <= 0) {
             throw new IllegalArgumentException();
         }
         this.radius = radius;
@@ -13,20 +13,20 @@ public class Circle extends Shape{
     }
 
     public void setRadius(double radius) {
-        if(radius <= 0){
+        if (radius <= 0) {
             throw new IllegalArgumentException();
-        }else {
+        } else {
             this.radius = radius;
         }
     }
 
     @Override
     public double getArea() {
-        return radius*radius*Math.PI;
+        return radius * radius * Math.PI;
     }
 
     @Override
     public double getPerimeter() {
-        return 2*radius*Math.PI;
+        return 2 * radius * Math.PI;
     }
 }

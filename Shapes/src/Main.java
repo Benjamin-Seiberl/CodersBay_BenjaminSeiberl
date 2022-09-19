@@ -1,4 +1,3 @@
-
 public class Main {
 
     public static void main(String[] args) {
@@ -6,12 +5,12 @@ public class Main {
         System.out.println("Circles: ");
         print(createCircle("#red", true, 2));
         print(createCircle("#brown", false, 5));
-        print(createCircle("#red", true, -2));
+        print(createCircle("#red", true, 2));
 
         System.out.println("Rectangles: ");
         print(createRectangle("#red", false, 2, 3));
         print(createRectangle("#yellow", true, 4, 2));
-        print(createRectangle("#white", false, 0, 3));
+        print(createRectangle("#white", false, 1, 3));
 
         System.out.println("Squares: ");
         print(createSquare("#red", true, 2));
@@ -60,7 +59,8 @@ public class Main {
         return square;
     }
 
-    public static void print(Shape s){;
+    public static void print(Shape s) {
+        ;
         System.out.println("Area: " + s.getArea());
         System.out.println("Perimeter: " + s.getPerimeter());
         System.out.println();

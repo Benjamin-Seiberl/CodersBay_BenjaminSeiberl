@@ -7,9 +7,10 @@ class CircleTest {
     private Circle circle;
 
     @BeforeEach
-    void setup(){
+    void setup() {
         circle = new Circle("#red", true, 2);
     }
+
     @Test
     void getAreaTest() {
         // radius^2 * Pi
