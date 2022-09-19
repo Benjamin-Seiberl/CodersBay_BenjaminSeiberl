@@ -27,9 +27,9 @@ class CircleTest {
         assertEquals(25.132741228718345907701147066236, circle.getPerimeter());
     }
 
-//    @Test
-//    void exceptionTest(){
-//        IllegalArgumentException thrown = assertThrows((IllegalArgumentException.class, () -> new Circle("#red", true, -2), "");
-//        assertTrue(thrown.getMessage().contains("Argument"));
-//    }
+    @Test
+    void exceptionTest(){
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> { new Circle("#red", true, -2); });
+        assertEquals(thrown.getMessage(), "Hallo");
+    }
 }

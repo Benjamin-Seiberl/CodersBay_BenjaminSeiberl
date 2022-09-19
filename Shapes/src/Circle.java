@@ -6,7 +6,7 @@ public class Circle extends Shape {
     public Circle(String color, boolean isFilled, double radius) throws IllegalArgumentException {
         super(color, isFilled);
         if (radius <= 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Hallo");
         }
         this.radius = radius;
         COUNTER__++;
