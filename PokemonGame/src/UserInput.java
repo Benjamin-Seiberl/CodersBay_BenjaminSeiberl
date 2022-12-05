@@ -13,13 +13,13 @@ public class UserInput {
                 System.out.println(errorText);
             }
         } while (number <= min);
-
+        System.out.println();
         return number;
     }
 
     public static int getInt(int min, int max, String errorText) {
         int number = 0;
-
+        System.out.print("\t\t- ");
         do {
             try {
                 Scanner sc = new Scanner(System.in);
@@ -29,12 +29,13 @@ public class UserInput {
                 System.out.println(errorText);
             }
         } while (number < min || number > max);
-
+        System.out.println();
         return number;
     }
 
     public static String getString(String errorText) {
         String input = "";
+        System.out.print("\t\t- ");
         boolean error = false;
         do {
             try {
@@ -45,6 +46,20 @@ public class UserInput {
                 error = true;
             }
         } while (error);
+
+        return input;
+    }
+
+    public static String getString(String yes, String no, String errorText) {
+        String input = "";
+        do {
+            try {
+                Scanner sc = new Scanner(System.in);
+                input = sc.nextLine();
+            } catch (Exception e) {
+                System.out.println(errorText);
+            }
+        } while (!input.equals(yes) && !input.equals(no));
 
         return input;
     }

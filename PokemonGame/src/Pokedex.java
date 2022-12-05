@@ -1,12 +1,8 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Pokedex {
     //region Fields
     private ArrayList<Pokemon> pokemonArrayList;
-
     private ArrayList<String> modifierNames;
     //endregion
 
@@ -20,15 +16,6 @@ public class Pokedex {
     //endregion
 
     //region Getter and Setter
-
-    public ArrayList<Pokemon> getPokemonArrayList() {
-        return pokemonArrayList;
-    }
-
-    public void setPokemonArrayList(ArrayList<Pokemon> pokemonArrayList) {
-        this.pokemonArrayList = pokemonArrayList;
-    }
-
     public ArrayList<String> getModifierNames() {
         return modifierNames;
     }
@@ -5934,53 +5921,8 @@ public class Pokedex {
         }
     }
 
-    public void fill() {
-        int number = 0;
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("./src/Pokedex.csv"));
-            String line = bufferedReader.readLine();
-            //Adds Modifier names
-            String[] againstNames = line.split("_");
-            ArrayList modifierNames = new ArrayList<>();
-            for (int i = 1; i < againstNames.length; i++) {
-                String[] names = againstNames[i].split(",");
-                modifierNames.add(names[0]);
-            }
-            this.setModifierNames(modifierNames);
-            do {
-                line = bufferedReader.readLine();
-                String[] abilitiesAndStats = line.split("]");
-
-                String[] abilitiesToFilter = abilitiesAndStats[0].split("'");
-
-                String[] stats = abilitiesAndStats[1].split(",");
-
-                //Adds all Abilities
-                ArrayList<String> abilities = new ArrayList<>();
-                for (int i = 0; i < abilitiesToFilter.length; i++) {
-                    if (i % 2 != 0) {
-                        abilities.add(abilitiesToFilter[i]);
-                    }
-                }
-
-                //Adds all type modifiers
-                ArrayList<Double> typeModifiers = new ArrayList<>();
-                for (int i = 1; i < 19; i++) {
-                    typeModifiers.add(Double.parseDouble(stats[i]));
-                }
-
-                Pokemon p = new Pokemon(stats[30], Integer.parseInt(stats[28]), Integer.parseInt(stats[19]), Integer.parseInt(stats[25]), Integer.parseInt(stats[35]), stats[36], stats[37], abilities, typeModifiers);
-                this.add(p);
-                number++;
-            } while (number != 151);
-        } catch (IOException e) {
-            System.out.println("Fehler beim einlesen");
-            e.printStackTrace();
-        }
-    }
-
     private void printf(String s) {
-        System.out.print(s);
+        System.out.print("\t\t\t" + s);
     }
 
     //endregion
