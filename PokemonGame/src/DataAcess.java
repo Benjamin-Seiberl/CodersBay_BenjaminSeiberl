@@ -1,10 +1,11 @@
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface DataAcess {
 
     Pokedex pokedex = null;
 
-    public Pokedex fillPokedex();
+    public Pokedex fillPokedex() throws SQLException;
 
     public Trainer getTrainer(int id);
 

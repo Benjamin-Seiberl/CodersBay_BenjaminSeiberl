@@ -6,7 +6,7 @@ public class SQLDatabase implements DataAcess {
     private Pokedex pokedex;
 
     @Override
-    public Pokedex fillPokedex() {
+    public Pokedex fillPokedex() throws SQLException {
         pokedex = new Pokedex();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -46,8 +46,6 @@ public class SQLDatabase implements DataAcess {
             }
             connection.close();
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return pokedex;

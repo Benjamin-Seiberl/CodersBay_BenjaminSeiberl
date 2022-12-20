@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class CSV implements DataAcess {
 
     private Pokedex pokedex;
-    private HashMap trainers;
+    private HashMap<Integer, String> trainers;
     @Override
     public Pokedex fillPokedex() {
         int number = 0;
@@ -69,25 +69,24 @@ public class CSV implements DataAcess {
             while(line != null){
                 String[] splitLine = line.replaceAll("\"", "").split(",");
                 if(Integer.parseInt(splitLine[1]) == id) {
-                    Pokemon pokemon = new Pokemon(pokedex.get(Integer.parseInt(splitLine[2])));
+                    Pokemon pokemon = new Pokemon(pokedex.get(Integer.parseInt(splitLine[2])-1));
                     pokebag.add(pokemon);
                 }
                 line = bufferedReader.readLine();
             }
-            trainer.setName();
+            trainer.setName(trainers.get(id).toString());
             trainer.setPokebag(pokebag);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
-        return null;
+        return trainer;
     }
 
     @Override
     public ArrayList<Integer> lookUpGameState() {
+        trainers = new HashMap<>();
         ArrayList<Integer> trainerList = new ArrayList<>();
         BufferedReader bufferedReader = null;
 
@@ -97,8 +96,10 @@ public class CSV implements DataAcess {
             String line = bufferedReader.readLine();
             while(line != null){
                 String[] splitLine = line.replaceAll("\"", "").split(",");
-                trainerList.add(Integer.parseInt(splitLine[0]));
-                trainers.put(splitLine[0])
+                if(Integer.parseInt(splitLine[0]) != 1) {
+                    trainerList.add(Integer.parseInt(splitLine[0]));
+                }
+                trainers.put(Integer.parseInt(splitLine[0]), splitLine[1]);
                 line = bufferedReader.readLine();
             }
         } catch (FileNotFoundException e) {
@@ -106,9 +107,6 @@ public class CSV implements DataAcess {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
-
         return trainerList;
     }
 
@@ -123,7 +121,7 @@ public class CSV implements DataAcess {
     }
 
     @Override
-    public void updateTrainer(Trainer player){
+    public void updateTrainer(Trainer player) {
 
     }
 }

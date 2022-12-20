@@ -160,16 +160,22 @@ public class Arena {
             if (i < player.getCurrentPokemon().getAbilities().size()) {
                 text = (String.format("%-30s", player.getCurrentPokemon().getAbilities().get(i)));
             } else {
-                text = (String.format("%-34s", ""));
+                text = (String.format("%-30s", ""));
             }
             if (i < enemy.getCurrentPokemon().getAbilities().size()) {
                 text += (String.format("%-34s", enemy.getCurrentPokemon().getAbilities().get(i)));
             } else {
-                text += (String.format("%-34s", ""));
+                text += (String.format("%-30s", ""));
             }
             strings.add(text);
         }
-        Engine.print("Choose an ability:", text1, "(1) " + strings.get(0), "(2) " +strings.get(1), strings.contains(2) ? "(3) " + strings.get(2) : String.format("%68s", ""));
+        if(strings.size() >= 3) {
+            Engine.print("Choose an ability:", text1, "(1) " + strings.get(0), "(2) " + strings.get(1), "(3) " + strings.get(2));
+        }else if(strings.size() == 2){
+            Engine.print("Choose an ability:", text1, "(1) " + strings.get(0), "(2) " + strings.get(1), String.format("%68s", ""));
+        }else{
+            Engine.print("Choose an ability:", text1, "(1) " + strings.get(0), String.format("%68s", ""), String.format("%68s", ""));
+        }
     }
 
     private void printCurrentPokemon() {
